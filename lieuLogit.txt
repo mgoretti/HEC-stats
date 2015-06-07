@@ -1,0 +1,25 @@
+		(1)	(2)
+VARIABLES	LABELS	fini	y1
+			
+2.sexe	Sexe = 2, M	0.155	0.030
+		(0.107)	(0.021)
+0.matu_lieu	matu_lieu = 0, 0	-0.615***	-0.125***
+		(0.198)	(0.044)
+20.matu_lieu	matu_lieu = 20, France	-0.483***	-0.095***
+		(0.142)	(0.030)
+29.matu_lieu	matu_lieu = 29, Luxembourg	-0.124	-0.022
+		(0.341)	(0.064)
+33.matu_lieu	matu_lieu = 33, Maroc	-2.075***	-0.473***
+		(0.423)	(0.088)
+2012o.debut	Debut = 2012, omitted	-	-
+			
+2013o.debut	Debut = 2013, omitted	-	-
+			
+2014o.debut	Debut = 2014, omitted	-	-
+			
+Constant	Constant	0.458***	
+		(0.120)	
+			
+Observations		2,121	2,121
+Robust standard errors in parentheses			
+*** p<0.01, ** p<0.05, * p<0.1			

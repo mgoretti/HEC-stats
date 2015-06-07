@@ -1,0 +1,245 @@
+\subsection{github}
+Lien vers le repository contenant tous les fichiers du projet: \url{https://github.com/mgoretti/HEC-stats}
+
+\subsection{graphiques}
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.6\paperwidth]{img/moyenne.eps}}
+\caption{Moyenne par année et par état du cursus (gradué vs. échec/abandon)}
+\label{fig:moyenne}
+\end{figure}
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.9\paperwidth]{img/canton.png}}
+\caption{Moyenne au Bachelor par canton de maturité (uniquement cursus réussis)}
+\label{fig:canton}
+\end{figure}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.75\paperwidth]{img/deltas.eps}}
+\caption{Distribution des deltas}
+\label{fig:deltas}
+\end{figure}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.8\paperwidth]{img/matu.png}}
+\caption{Moyenne au Bachelor par type de maturité (cursus réussis uniquement)}
+\label{fig:matu}
+\end{figure}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.95\paperwidth]{img/pays.png}}
+\caption{Moyenne au Bachelor par pays d'obtention du diplôme d'accès (cursus réussis uniquement)}
+\label{fig:pays}
+\end{figure}
+
+
+\subsection{tableaux}
+\subsubsection{Données}
+
+\begin{table}[H]
+\input{tab/corr}
+\caption{Corrélation entre les delta des différentes catégories}
+\label{tab:corr}
+\end{table}
+
+\begin{table}[H]
+\input{reg/sci23}
+\caption{Différentes combinaisons de régresseurs expliquant les résultats quantitatifs de 2ème et 3ème année}
+\label{tab:sci23}
+\end{table}
+
+\begin{table}[H]
+\input{reg/mix23}
+\caption{Différentes combinaisons de régresseurs expliquant les résultats mixtes de 2ème et 3ème année}
+\label{tab:mix23}
+\end{table}
+
+\begin{table}[H]
+\input{reg/oth23}
+\caption{Différentes combinaisons de régresseurs expliquant les résultats non-quantitatifs de 2ème et 3ème année}
+\label{tab:oth23}
+\end{table}
+
+\subsubsection{Analyse Descriptive}
+
+\begin{table}[H]
+\input{tab/sex}
+\caption{Nombre d'étudiants par année de début d'études et par sexe}
+\label{tab:sex}
+\end{table}
+
+\begin{table}[H]
+\input{tab/echec}
+\caption{Nombre d'échecs par année de début d'études et par sexe}
+\label{tab:echec}
+\end{table}
+
+\begin{table}[H]
+\input{tab/moyenne}
+\caption{Moyennes générales de l'ensemble des étudiants, par année de début d'études}
+\label{tab:moyenne}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\resizebox{0.85\textwidth}{!}{\begin{minipage}{\textwidth}%
+\input{tab/moyenneFail}
+\caption{Moyennes générales des étudiants ayant échoué ou abandonné, \\ par année de début d'études}
+\label{tab:moyenneFail}
+\end{minipage}}%
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+\resizebox{0.85\textwidth}{!}{\begin{minipage}{\textwidth}%
+\input{tab/moyenneFini}
+\caption{Moyennes générales des étudiants ayant réussi leur cursus, \\ par année de début d'études}
+\label{tab:moyenneFini}
+\end{minipage}}%
+\end{table}
+
+\begin{table}[H]
+\input{tab/deltas}
+\caption{Distribution des différents delta par année de début d'études}
+\label{tab:deltas}
+\end{table}
+
+\subsubsection{Résultats}
+
+\begin{table}[H]
+  \centering
+  %\setcapwidth{0.6\textwidth}
+  \checkoddpage
+  \edef\side{\ifoddpage l\else r\fi}%
+\resizebox{0.85\textwidth}{!}{
+    \begin{minipage}[t]{.45\textwidth}
+      \centering
+      \input{reg/result2}
+	  \caption{Effets de la surperformance 
+      catégorielle \\ sur la moyenne relative et 
+      absolue de deuxième \\ année}
+      \label{tab:result2}
+
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.45\textwidth}
+      \centering
+      \input{reg/result3}
+	  \caption{Effets de la surperformance
+      catégorielle \\ sur la moyenne relative et 
+      absolue de troisième \\ année}
+      \label{tab:result3}
+    \end{minipage}%
+  }%
+
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\resizebox{0.85\textwidth}{!}{\begin{minipage}{\textwidth}%
+\input{reg/quant2}
+\caption{Toutes les combinaisons de régresseurs pour (1) du tableau \ref{tab:result2}}
+\label{tab:quant2}
+\end{minipage}}%
+\end{table}
+
+
+\begin{table}[H]
+\input{reg/logit}
+\caption{Probabilité de réussir en fonction des deltas. Référence: début en 2011}
+\label{tab:logit}
+\end{table}
+
+\begin{table}[H]
+  %\setcapwidth{0.6\textwidth}
+  \checkoddpage
+  \edef\side{\ifoddpage l\else r\fi}%
+  \makebox[\textwidth][\side]{%
+    \begin{minipage}[t]{.5\textwidth}
+      \centering
+      \input{reg/oldClasses}
+	  \caption{Effet de la surperformance par cours de première année sur la moyenne normalisée de deuxième (Plans d'études à examens annuels, avant 2011)}
+      \label{tab:oldClasses}
+
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.5\textwidth}
+      \centering
+      \input{reg/newClasses}
+	  \caption{Effet de la surperformance par cours de première année sur la moyenne normalisée de deuxième (Plans d'études à examens semestriels, dès 2011)}
+      \label{tab:newClasses}
+    \end{minipage}%
+  }%
+\end{table}
+
+\begin{table}[H]
+\centering
+\resizebox{0.85\textwidth}{!}{\begin{minipage}{\textwidth}%
+\input{reg/bac}
+\caption{Distinction entre les orientations de troisième année (référence: Management)}
+\label{tab:bac}
+\end{minipage}}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\resizebox{0.85\textwidth}{!}{\begin{minipage}{\textwidth}%
+\input{reg/matuLieu}
+\caption{Moyenne (avec et sans échecs) en fonction du pays de maturité. Référence: Suisse, 2010}
+\label{tab:matuLieu}
+\end{minipage}}%
+\end{table}
+
+\begin{table}[H]
+\input{reg/matuNom}
+\caption{Moyenne (avec et sans échecs) en fonction du type de maturité. Référence: Éco-droit, 2010}
+\label{tab:matuNom}
+\end{table}
+
+\begin{table}[H]
+\input{reg/matuNomLogit}
+\caption{Probabilité de réussir en fonction du type de maturité. Référence: Économie et Droit, 2010}
+\label{tab:matuNomLogit}
+\end{table}
+
+
+\begin{table}[H]
+\input{reg/matuLieuLogit}
+\caption{Probabilité de réussir en fonction du lieu de maturité. Référence: Suisse}
+\label{tab:matuLieuLogit}
+\end{table}
+
+
+\begin{table}[H]
+\begin{center}
+\resizebox*{!}{\dimexpr\textheight-\lineskip\relax}{%
+\input{reg/ecole}
+}%
+\caption{Moyenne (avec et sans échecs) en fonction du gymnase. Référence: Beaulieu, 2010}
+\label{tab:matuEcole}
+\end{center}
+\end{table}
+
+
+\subsubsection{Sondage}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.9\paperwidth]{img/sondage1.png}}
+\caption{Résultats de notre sondage}
+\label{fig:sondage1}
+\end{figure}
+
+\vfill
+\pagebreak
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.9\paperwidth]{img/sondage2.png}}
+\caption{Résultats de notre sondage (suite)}
+\label{fig:sondage2}
+\end{figure}
+

@@ -1,0 +1,16 @@
+		(1)	(2)
+VARIABLES	LABELS	quant_2	quant_2
+			
+delta_SCI1	delta_SCI1	0.509***	0.442
+		(0.115)	(0.299)
+delta_MIX1	delta_MIX1	0.170***	0.244**
+		(0.032)	(0.099)
+2.sexe	Sexe = 2, M	0.008	-0.041*
+		(0.010)	(0.024)
+Constant	Constant	0.539***	0.598***
+		(0.013)	(0.020)
+			
+Observations		1,385	524
+R-squared		0.037	0.023
+Robust standard errors in parentheses			
+*** p<0.01, ** p<0.05, * p<0.1			

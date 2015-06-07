@@ -1,0 +1,52 @@
+		(1)	(2)
+VARIABLES	LABELS	moyenne	moyenne
+			
+2.sexe	Sexe = 2, M	0.050	0.009
+		(0.034)	(0.020)
+0.matu_ecole	matu_ecole = 0, 0	-0.047	0.003
+		(0.088)	(0.055)
+3.matu_ecole	matu_ecole = 3, Autre ecole	-0.543***	-0.008
+		(0.165)	(0.094)
+6.matu_ecole	matu_ecole = 6, College Calvin, Geneve	-0.106	-0.059
+		(0.151)	(0.107)
+19.matu_ecole	matu_ecole = 19, College de l'Abbaye, Saint-Maurice	0.249*	0.054
+		(0.134)	(0.082)
+38.matu_ecole	matu_ecole = 38, Ecole des Arches, Lausanne	-0.543***	-0.245***
+		(0.176)	(0.088)
+40.matu_ecole	matu_ecole = 40, Ecole etrangere	-0.207**	-0.019
+		(0.086)	(0.054)
+42.matu_ecole	matu_ecole = 42, Ecole suisse non codifiee	-0.352***	-0.180**
+		(0.130)	(0.073)
+47.matu_ecole	matu_ecole = 47, Gymnase d'Yverdon, Cheseaux-Noreaz	0.067	0.103
+		(0.127)	(0.073)
+48.matu_ecole	matu_ecole = 48, Gymnase de Beaulieu, Lausanne	0.189*	-0.020
+		(0.099)	(0.062)
+49.matu_ecole	matu_ecole = 49, Gymnase de Burier, La Tour-de-Peilz	0.032	0.009
+		(0.105)	(0.063)
+50.matu_ecole	matu_ecole = 50, Gymnase de Chamblandes, Pully	0.110	0.009
+		(0.110)	(0.068)
+51.matu_ecole	matu_ecole = 51, Gymnase de Morges, Morges	0.144	0.050
+		(0.105)	(0.062)
+52.matu_ecole	matu_ecole = 52, Gymnase de Nyon, Nyon	0.134	0.012
+		(0.102)	(0.062)
+53.matu_ecole	matu_ecole = 53, Gymnase de la Cite Lausanne	0.085	0.027
+		(0.117)	(0.073)
+54.matu_ecole	matu_ecole = 54, Gymnase du Bugnon, Lausanne	0.132	-0.040
+		(0.112)	(0.066)
+94.matu_ecole	matu_ecole = 94, Lycee Denis-de-Rougemont, Neuch‰tel	-0.085	0.082
+		(0.141)	(0.079)
+95.matu_ecole	matu_ecole = 95, Lycee Jean-Piaget, Neuch‰tel	0.126	-0.004
+		(0.178)	(0.088)
+96.matu_ecole	matu_ecole = 96, Lycee cantonal et Ecole superieure de commerce, Po	0.099	0.054
+		(0.169)	(0.112)
+97.matu_ecole	matu_ecole = 97, Lycee-College de La Planta, Sion	0.352***	0.122
+		(0.128)	(0.098)
+98.matu_ecole	matu_ecole = 98, Lycee-College des Creusets, Sion	0.070	0.018
+		(0.107)	(0.068)
+Constant	Constant	3.937***	4.572***
+		(0.091)	(0.053)
+			
+Observations		2,460	1,451
+R-squared		0.295	0.034
+Robust standard errors in parentheses			
+*** p<0.01, ** p<0.05, * p<0.1			

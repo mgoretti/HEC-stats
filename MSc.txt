@@ -1,0 +1,32 @@
+		(1)
+VARIABLES	LABELS	moyenne
+		
+2.sexe	Sexe = 2, M	-0.050**
+		(0.022)
+1.MSc	MSc = 1, M-DER	0.178***
+		(0.048)
+2.MSc	MSc = 2, M-DGF	0.172
+		(0.112)
+3.MSc	MSc = 3, MDE	-0.214**
+		(0.100)
+4.MSc	MSc = 4, MScACF	0.125***
+		(0.032)
+5.MSc	MSc = 5, MScAS	0.119***
+		(0.037)
+6.MSc	MSc = 6, MScE 2	0.366***
+		(0.047)
+7.MSc	MSc = 7, MScF	0.231***
+		(0.031)
+8.MSc	MSc = 8, MScF 2	0.224***
+		(0.046)
+9.MSc	MSc = 9, MScIS	0.048
+		(0.047)
+10.MSc	MSc = 10, MScM 2 M+	0.011
+		(0.032)
+Constant	Constant	4.482***
+		(0.021)
+		
+Observations		1,083
+R-squared		0.117
+Robust standard errors in parentheses		
+*** p<0.01, ** p<0.05, * p<0.1		

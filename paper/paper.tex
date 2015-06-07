@@ -1,0 +1,114 @@
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt]{article} % For LaTeX2e
+% We will use NIPS submission format
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{ifoddpage}
+
+\usepackage{epstopdf}
+\usepackage{nips13submit_e,times}
+% for hyperlinks
+\usepackage{hyperref}
+\usepackage{url}
+% For figures
+\usepackage{graphicx}
+\usepackage{subfigure}
+% math packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsopn}
+\usepackage{ifthen}
+\usepackage{natbib}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+
+% tables
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{tabularx}
+
+
+%hl
+\usepackage{color,soul}
+\usepackage{soulutf8}
+
+\usepackage[top=.75in, bottom=1in, left=.75in, right=.75in]{geometry}
+
+
+
+
+\linespread{1.5}\selectfont
+
+
+\title{Les facteurs de réussite académique au Bachelor d'HEC Lausanne }
+\def\subtitle{Faut-il être un \textit{matheux} pour s'en sortir?}
+
+
+\author{
+Marco Goretti \\
+\texttt{marco.goretti@unil.ch}
+\And
+Malek Azzouz \\
+\texttt{malek.azzouz@unil.ch}
+\And
+Thérèse Schmutz \\
+\texttt{therese.schmutz@unil.ch}
+}
+
+
+\nipsfinalcopy
+
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\begin{abstract}
+
+Cet article analyse l'impact des compétences à mieux performer, relativement à sa moyenne, dans les branches à composante quantitative (ex. mathématiques, statistiques) sur la performance et la réussite future au Bachelor d'HEC Lausanne, sa réputation étant d'y accorder beaucoup d'importance. En complément, nous avons également étudié l'influence d'autres facteurs tels que le type et le pays d'obtention du diplôme d'accès, ainsi que le type d'option choisi en troisième année. En considérant les étudiants des cinq dernières promotions ayant réussi ou échoué dans leur cursus, nous obtenons un effet significatif et positif de la surperformance dans les branches quantitatives de première année sur la performance de deuxième année et la réussite au Bachelor. Son effet sur la performance de troisième année s'estompe, suggérant que le système de libre choix des cours y prévalant permette à chaque étudiant de s'orienter vers des matières en accord avec ses points forts. Par conséquent, le cursus commun des deux premières années semble accorder plus de poids aux enseignements du type quantitatif.
+
+\end{abstract}
+
+\vfill
+
+\makebox[\textwidth][c]{\includegraphics[width=.2\paperwidth]{img/logo.png}}
+\begin{center}
+\url{https://github.com/mgoretti/HEC-stats}
+\end{center}
+
+\newpage
+\setcounter{page}{1}
+
+\section{Introduction}
+\input{tex/introduction}
+
+\section{Données}
+\input{tex/donnees}
+
+\section{Analyse descriptive}
+\input{tex/analyse}
+
+\section{Résultats}
+\input{tex/resultats}
+
+\vspace{-0.3cm}
+\section{Conclusion}
+\vspace{-0.2cm}
+\input{tex/conclusion}
+
+
+\nocite{*}
+\bibliographystyle{plainnat}
+\bibliography{bib/bib}
+
+
+\section{Annexe}
+\input{tex/annexe}
+
+\end{document}

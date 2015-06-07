@@ -1,0 +1,36 @@
+		(1)
+VARIABLES	LABELS	quant_2
+		
+delta6	6 delta	-0.037
+		(0.047)
+delta25	25 delta	-0.176***
+		(0.059)
+delta26	26 delta	0.122**
+		(0.057)
+delta52	52 delta	-0.099*
+		(0.056)
+delta57	57 delta	-0.143**
+		(0.063)
+delta103	103 delta	-0.209***
+		(0.046)
+delta104	104 delta	0.033
+		(0.051)
+delta122	122 delta	-0.051
+		(0.063)
+delta123	123 delta	0.070
+		(0.067)
+delta133	133 delta	-0.252***
+		(0.062)
+delta171	171 delta	-0.130**
+		(0.057)
+delta172	172 delta	0.089
+		(0.060)
+2.sexe	Sexe = 2, M	0.007
+		(0.020)
+Constant	Constant	0.610***
+		(0.017)
+		
+Observations		551
+R-squared		0.175
+Robust standard errors in parentheses		
+*** p<0.01, ** p<0.05, * p<0.1		

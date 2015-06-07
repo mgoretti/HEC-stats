@@ -1,0 +1,356 @@
+\documentclass{article} % For LaTeX2e
+% We will use NIPS submission format
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{nips13submit_e,times}
+% for hyperlinks
+\usepackage{hyperref}
+\usepackage{url}
+% For figures
+\usepackage{graphicx} 
+\usepackage{subfigure} 
+% math packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsopn}
+\usepackage{ifthen}
+\usepackage{natbib}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+
+% tables
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{caption}
+
+\title{Repeated Prisoner's Dilemma with Children}
+
+\author{
+Marco Goretti \\
+\texttt{} \\
+}
+
+
+\nipsfinalcopy 
+
+
+\begin{document}
+
+\maketitle
+
+
+\section{Data Analysis}
+
+\begin{table}[H]
+\centering
+\caption{\label{}\textbf{Players by age}}
+\begin{tabular}{lccc}
+   & Moyenne & Moyenne  \\
+   & (tous) & (ayant obtenu un bachelor) \\ \hline
+Mean   & 3.96   &     4.59       \\
+SD &  0.93 & 0.35
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{Probability that a kid collaborates} \label{tab:behav_results}
+
+
+\begin{center}
+\begin{tabular}{lcc} \hline
+ & (1) & (2) \\
+VARIABLES & quant\_2 & moyenne\_2 \\ \hline
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+delta\_SCI1 & 0.497*** & 1.896*** \\
+\vspace{4pt} & \begin{footnotesize}(0.116)\end{footnotesize} & \begin{footnotesize}(0.511)\end{footnotesize} \\
+delta\_MIX1 & 0.176*** & 0.610*** \\
+\vspace{4pt} & \begin{footnotesize}(0.032)\end{footnotesize} & \begin{footnotesize}(0.138)\end{footnotesize} \\
+Sexe = 2, M & -0.003 & 0.039 \\
+\vspace{4pt} & \begin{footnotesize}(0.010)\end{footnotesize} & \begin{footnotesize}(0.043)\end{footnotesize} \\
+Constant & 0.579*** & 4.091*** \\
+ & \begin{footnotesize}(0.008)\end{footnotesize} & \begin{footnotesize}(0.035)\end{footnotesize} \\
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+Observations & 1,909 & 1,909 \\
+ $R^2$ & 0.012 & 0.009 \\ \hline
+\multicolumn{3}{c}{\begin{footnotesize} Robust standard errors in parentheses\end{footnotesize}} \\
+\multicolumn{3}{c}{\begin{footnotesize} *** p$<$0.01, ** p$<$0.05, * p$<$0.1\end{footnotesize}} \\
+\end{tabular}
+\end{center}
+
+
+\end{table}
+
+\begin{table}[H]
+\caption{Probability that a kid collaborates} \label{tab:behav_results}
+
+
+\begin{center}
+\begin{tabular}{lcc} \hline
+ & (1) & (2) \\
+VARIABLES & quant\_3 & moyenne\_3 \\ \hline
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+delta\_SCI1 & -0.265** & -0.273 \\
+\vspace{4pt} & \begin{footnotesize}(0.124)\end{footnotesize} & \begin{footnotesize}(0.317)\end{footnotesize} \\
+delta\_MIX1 & -0.052 & -0.057 \\
+\vspace{4pt} & \begin{footnotesize}(0.035)\end{footnotesize} & \begin{footnotesize}(0.087)\end{footnotesize} \\
+Sexe = 2, M & -0.036*** & -0.071*** \\
+\vspace{4pt} & \begin{footnotesize}(0.010)\end{footnotesize} & \begin{footnotesize}(0.025)\end{footnotesize} \\
+Constant & 0.667*** & 4.787*** \\
+ & \begin{footnotesize}(0.008)\end{footnotesize} & \begin{footnotesize}(0.020)\end{footnotesize} \\
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+Observations & 1,103 & 1,103 \\
+ $R^2$ & 0.015 & 0.008 \\ \hline
+\multicolumn{3}{c}{\begin{footnotesize} Robust standard errors in parentheses\end{footnotesize}} \\
+\multicolumn{3}{c}{\begin{footnotesize} *** p$<$0.01, ** p$<$0.05, * p$<$0.1\end{footnotesize}} \\
+\end{tabular}
+\end{center}
+
+
+
+\end{table}
+
+\begin{table}[H]
+\caption{Probability that a kid collaborates} \label{tab:behav_results}
+
+
+\begin{center}
+\begin{tabular}{lccc} \hline
+ & (1) & (2) \\
+ & fini & fini & marginal \\ \hline
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+delta\_SCI1 & 10.372*** &  &  \\
+\vspace{4pt} & \begin{footnotesize}(1.456)\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+delta\_MIX1 & 3.522*** &  &  \\
+\vspace{4pt} & \begin{footnotesize}(0.461)\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+delta\_OTH1 &  & -2.378*** & -0.441*** \\
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}(0.300)\end{footnotesize} & \begin{footnotesize}(0.055)\end{footnotesize} \\
+Debut = 2007 & 3.614*** & 3.536*** & 0.455*** \\
+\vspace{4pt} & \begin{footnotesize}(0.403)\end{footnotesize} & \begin{footnotesize}(0.403)\end{footnotesize} & \begin{footnotesize}(0.028)\end{footnotesize} \\
+Debut = 2008 & 1.640*** & 1.593*** & 0.322*** \\
+\vspace{4pt} & \begin{footnotesize}(0.185)\end{footnotesize} & \begin{footnotesize}(0.182)\end{footnotesize} & \begin{footnotesize}(0.033)\end{footnotesize} \\
+Debut = 2009 & 0.471*** & 0.454*** & 0.110*** \\
+\vspace{4pt} & \begin{footnotesize}(0.141)\end{footnotesize} & \begin{footnotesize}(0.140)\end{footnotesize} & \begin{footnotesize}(0.034)\end{footnotesize} \\
+Debut = 2010 & 0.357*** & 0.361*** & 0.089*** \\
+\vspace{4pt} & \begin{footnotesize}(0.137)\end{footnotesize} & \begin{footnotesize}(0.136)\end{footnotesize} & \begin{footnotesize}(0.033)\end{footnotesize} \\
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+Constant & 0.102 & 0.120 &  \\
+ & \begin{footnotesize}(0.104)\end{footnotesize} & \begin{footnotesize}(0.103)\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+ Observations & 2,103 & 2,102 & 2,102 \\ \hline
+\multicolumn{4}{c}{\begin{footnotesize} Robust standard errors in parentheses\end{footnotesize}} \\
+\multicolumn{4}{c}{\begin{footnotesize} *** p$<$0.01, ** p$<$0.05, * p$<$0.1\end{footnotesize}} \\
+\end{tabular}
+\end{center}
+
+\end{table}
+
+\clearpage
+$$\frac{1}{1+e^{-t}}$$
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{l | ccc} 
+             & delta & P( S | high ) & P( S | low ) \\ \hline
+Qua &  $\pm 0.1$ & 0.76 & 0.28 \\ 
+Mix &  $+0.4/-0.5$ & 0.82 & 0.16 \\ 
+Oth &  $\pm 0.5$ & 0.25 & 0.79 \\ 
+
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+
+\begin{center}
+\begin{tabular}{lcc} \hline
+ & (1) & (2) \\
+ & moyenne 2e & moyenne 3e \\ \hline
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+Males & -0.030 & -0.088*** \\
+\vspace{4pt} & \begin{footnotesize}(0.029)\end{footnotesize} & \begin{footnotesize}(0.024)\end{footnotesize} \\
+Echec. & -1.484*** &  \\
+\vspace{4pt} & \begin{footnotesize}(0.047)\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+Bach. Eco. & 0.273*** & 0.223*** \\
+\vspace{4pt} & \begin{footnotesize}(0.025)\end{footnotesize} & \begin{footnotesize}(0.034)\end{footnotesize} \\
+Constant & 4.443*** & 4.757*** \\
+ & \begin{footnotesize}(0.020)\end{footnotesize} & \begin{footnotesize}(0.019)\end{footnotesize} \\
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+Observations & 1,913 & 1,107 \\
+ $R^2$ & 0.579 & 0.053 \\ \hline
+\multicolumn{3}{c}{\begin{footnotesize} Robust standard errors in parentheses\end{footnotesize}} \\
+\multicolumn{3}{c}{\begin{footnotesize} *** p$<$0.01, ** p$<$0.05, * p$<$0.1\end{footnotesize}} \\
+\end{tabular}
+\end{center}
+
+\end{table}
+
+\begin{table}[H]
+
+\begin{center}
+\begin{tabular}{lc} \hline
+ & (1) \\
+VARIABLES & moyenne \\ \hline
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} \\
+Sexe = 2, M & -0.050** \\
+\vspace{4pt} & \begin{footnotesize}(0.022)\end{footnotesize} \\
+MSc = 1, M-DER & 0.178*** \\
+\vspace{4pt} & \begin{footnotesize}(0.048)\end{footnotesize} \\
+MSc = 2, M-DGF & 0.172 \\
+\vspace{4pt} & \begin{footnotesize}(0.112)\end{footnotesize} \\
+MSc = 3, MDE & -0.214** \\
+\vspace{4pt} & \begin{footnotesize}(0.100)\end{footnotesize} \\
+MSc = 4, MScACF & 0.125*** \\
+\vspace{4pt} & \begin{footnotesize}(0.032)\end{footnotesize} \\
+MSc = 5, MScAS & 0.119*** \\
+\vspace{4pt} & \begin{footnotesize}(0.037)\end{footnotesize} \\
+MSc = 6, MScE 2 & 0.366*** \\
+\vspace{4pt} & \begin{footnotesize}(0.047)\end{footnotesize} \\
+MSc = 7, MScF & 0.231*** \\
+\vspace{4pt} & \begin{footnotesize}(0.031)\end{footnotesize} \\
+MSc = 8, MScF 2 & 0.224*** \\
+\vspace{4pt} & \begin{footnotesize}(0.046)\end{footnotesize} \\
+MSc = 9, MScIS & 0.048 \\
+\vspace{4pt} & \begin{footnotesize}(0.047)\end{footnotesize} \\
+MSc = 10, MScM 2 M+ & 0.011 \\
+\vspace{4pt} & \begin{footnotesize}(0.032)\end{footnotesize} \\
+Constant & 4.482*** \\
+ & \begin{footnotesize}(0.021)\end{footnotesize} \\
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} \\
+Observations & 1,083 \\
+ $R^2$ & 0.117 \\ \hline
+\multicolumn{2}{c}{\begin{footnotesize} Robust standard errors in parentheses\end{footnotesize}} \\
+\multicolumn{2}{c}{\begin{footnotesize} *** p$<$0.01, ** p$<$0.05, * p$<$0.1\end{footnotesize}} \\
+\end{tabular}
+\end{center}
+
+\end{table}
+
+$$
+\overline{quant} = \delta_{SCI} \beta_1 +  \delta_{MIX} \beta_2 + M \beta_3 + \epsilon
+$$
+$$
+moyenne = \delta_{SCI} \beta_1 +  \delta_{MIX} \beta_2 + M \beta_3 + \epsilon
+$$
+
+$$
+P(S) = \sigma (\delta_{SCI} \beta_1 +  \delta_{MIX} \beta_2 + \text{Years } \gamma + \epsilon)
+$$
+
+\begin{table}[H]
+
+
+\begin{center}
+\begin{tabular}{lcc} \hline
+ & (1) & (2) \\
+ & quant 2 & moyenne 2 \\ \hline
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+delta\_SCI1 & 0.497*** & 1.896*** \\
+\vspace{4pt} & \begin{footnotesize}(0.116)\end{footnotesize} & \begin{footnotesize}(0.511)\end{footnotesize} \\
+delta\_MIX1 & 0.176*** & 0.610*** \\
+\vspace{4pt} & \begin{footnotesize}(0.032)\end{footnotesize} & \begin{footnotesize}(0.138)\end{footnotesize} \\
+Male & -0.003 & 0.039 \\
+\vspace{4pt} & \begin{footnotesize}(0.010)\end{footnotesize} & \begin{footnotesize}(0.043)\end{footnotesize} \\
+Constant & 0.579*** & 4.091*** \\
+ & \begin{footnotesize}(0.008)\end{footnotesize} & \begin{footnotesize}(0.035)\end{footnotesize} \\
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+Observations & 1,909 & 1,909 \\
+ $R^2$ & 0.012 & 0.009 \\ \hline
+\multicolumn{3}{c}{\begin{footnotesize} Robust standard errors in parentheses\end{footnotesize}} \\
+\multicolumn{3}{c}{\begin{footnotesize} *** p$<$0.01, ** p$<$0.05, * p$<$0.1\end{footnotesize}} \\
+\end{tabular}
+\end{center}
+
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lcc} \hline
+ & (1) & (2) \\
+ & quant 3 & moyenne 3 \\ \hline
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+delta\_SCI1 & -0.265** & -0.273 \\
+\vspace{4pt} & \begin{footnotesize}(0.124)\end{footnotesize} & \begin{footnotesize}(0.317)\end{footnotesize} \\
+delta\_MIX1 & -0.052 & -0.057 \\
+\vspace{4pt} & \begin{footnotesize}(0.035)\end{footnotesize} & \begin{footnotesize}(0.087)\end{footnotesize} \\
+Male & -0.036*** & -0.071*** \\
+\vspace{4pt} & \begin{footnotesize}(0.010)\end{footnotesize} & \begin{footnotesize}(0.025)\end{footnotesize} \\
+Constant & 0.667*** & 4.787*** \\
+ & \begin{footnotesize}(0.008)\end{footnotesize} & \begin{footnotesize}(0.020)\end{footnotesize} \\
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+Observations & 1,103 & 1,103 \\
+ $R^2$ & 0.015 & 0.008 \\ \hline
+\multicolumn{3}{c}{\begin{footnotesize} Robust standard errors in parentheses\end{footnotesize}} \\
+\multicolumn{3}{c}{\begin{footnotesize} *** p$<$0.01, ** p$<$0.05, * p$<$0.1\end{footnotesize}} \\
+\end{tabular}
+\end{center}
+
+\end{table}
+
+\begin{table}[H]
+
+\begin{center}
+\begin{tabular}{lc} \hline
+ & (1) \\
+ & quant 2 \\ \hline
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} \\
+Management & -0.061*** \\
+\vspace{4pt} & \begin{footnotesize}(0.022)\end{footnotesize} \\
+Maths & 0.104*** \\
+\vspace{4pt} & \begin{footnotesize}(0.039)\end{footnotesize} \\
+Compta & 0.127*** \\
+\vspace{4pt} & \begin{footnotesize}(0.031)\end{footnotesize} \\
+Constant & 0.604*** \\
+ & \begin{footnotesize}(0.009)\end{footnotesize} \\
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} \\
+Observations & 951 \\
+ $R^2$ & 0.042 \\ \hline
+\multicolumn{2}{c}{\begin{footnotesize} Robust standard errors in parentheses\end{footnotesize}} \\
+\multicolumn{2}{c}{\begin{footnotesize} *** p$<$0.01, ** p$<$0.05, * p$<$0.1\end{footnotesize}} \\
+\end{tabular}
+\end{center}
+
+\end{table}
+
+\begin{table}[H]
+
+\begin{center}
+\begin{tabular}{lc} \hline
+ & (1) \\
+ & quant 2 \\ \hline
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} \\
+Management & -0.037 \\
+\vspace{4pt} & \begin{footnotesize}(0.047)\end{footnotesize} \\
+compta I & -0.176*** \\
+\vspace{4pt} & \begin{footnotesize}(0.059)\end{footnotesize} \\
+compta II & 0.122** \\
+\vspace{4pt} & \begin{footnotesize}(0.057)\end{footnotesize} \\
+Prog & -0.143** \\
+\vspace{4pt} & \begin{footnotesize}(0.063)\end{footnotesize} \\
+Droit 1er & -0.209*** \\
+\vspace{4pt} & \begin{footnotesize}(0.046)\end{footnotesize} \\
+Droit 2e & 0.033 \\
+\vspace{4pt} & \begin{footnotesize}(0.051)\end{footnotesize} \\
+Modeles Info & -0.252*** \\
+\vspace{4pt} & \begin{footnotesize}(0.062)\end{footnotesize} \\
+Stats I & -0.130** \\
+\vspace{4pt} & \begin{footnotesize}(0.057)\end{footnotesize} \\
+Stats II & 0.089 \\
+\vspace{4pt} & \begin{footnotesize}(0.060)\end{footnotesize} \\
+Constant & 0.610*** \\
+ & \begin{footnotesize}(0.017)\end{footnotesize} \\
+\vspace{4pt} & \begin{footnotesize}\end{footnotesize} \\
+Observations & 551 \\
+ $R^2$ & 0.175 \\ \hline
+\multicolumn{2}{c}{\begin{footnotesize} Robust standard errors in parentheses\end{footnotesize}} \\
+\multicolumn{2}{c}{\begin{footnotesize} *** p$<$0.01, ** p$<$0.05, * p$<$0.1\end{footnotesize}} \\
+\end{tabular}
+\end{center}
+
+
+\end{table}
+
+\end{document}

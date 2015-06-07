@@ -1,0 +1,16 @@
+		(1)	(2)	(3)	(4)	(5)	(6)
+VARIABLES	LABELS	delta_OTH23	delta_OTH23	delta_OTH23	delta_OTH23	delta_OTH23	delta_OTH23
+							
+delta_SCI1	delta_SCI1	-0.704***		0.042	-0.309***		
+		(0.064)		(0.059)	(0.045)		
+delta_MIX1	delta_MIX1	-0.166***	-0.012			-0.021	
+		(0.019)	(0.013)			(0.013)	
+delta_OTH1	delta_OTH1		0.151***	0.161***			0.152***
+			(0.014)	(0.019)			(0.014)
+Constant	Constant	0.029***	0.028***	0.028***	0.028***	0.028***	0.028***
+		(0.005)	(0.005)	(0.005)	(0.005)	(0.005)	(0.005)
+							
+Observations		1,504	1,504	1,504	1,505	1,504	1,504
+R-squared		0.104	0.103	0.102	0.050	0.020	0.102
+Robust standard errors in parentheses							
+*** p<0.01, ** p<0.05, * p<0.1							

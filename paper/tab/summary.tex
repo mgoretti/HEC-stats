@@ -1,0 +1,52 @@
+\begin{tabularx}{\textwidth}{c|l|l}
+
+\hline
+\multicolumn{3}{c}{\textbf{Variables dépendantes}} \\
+\hline
+Moyenne\_1 & 
+$\text{Moyenne\_1}_{j} = \sum \text{CR}_i \cdot \text{Note}_{i,j} /  \sum \text{CR}_i, \text{year} = 1$ & 
+\multirow{3}{*}{\parbox{7cm}{%
+Moyenne des résultats obtenus par l'élève j pondérés par le nombre de crédits ECTS correspondant à chaque enseignement, calculée pour chaque année du cursus.
+}} \\%
+Moyenne\_2 & 
+$\text{Moyenne\_2}_{j} = \sum \text{CR}_i \cdot \text{Note}_{i,j} /  \sum \text{CR}_i, \text{year} = 2$ & \\
+Moyenne\_3 & 
+$\text{Moyenne\_3}_{j} = \sum \text{CR}_i \cdot \text{Note}_{i,j} /  \sum \text{CR}_i, \text{year} = 3$ & \\
+&&\\
+\hline
+$\text{quant}_i$ & 
+$\text{quant}_{ij} = \frac{\text{count}(n_k| \text{note}_{i,k} \leq \text{note}_{i,j})}{\text{count}(n_k)}, n_k = \text{élève}_k \in \text{cours}_i $ & 
+\multirow{2}{*}{\parbox{7cm}{%
+Quantile correspondant à la performance dans le cours i par l'élève j.
+}} \\%
+& &\\
+quant\_1 & $\text{quant\_1}_{j} = \sum \text{CR}_i \cdot \text{quant}_{i,j} /  \sum \text{CR}_i, \text{year} = 1$ & 
+\multirow{3}{*}{\parbox{7cm}{%
+Moyenne des quantiles des cours pondérée par les crédits (équivalent centré de la moyenne arithmétique des notes), calculée pour chaque année du cursus.
+}} \\%
+quant\_2 & $\text{quant\_2}_{j} = \sum \text{CR}_i \cdot \text{quant}_{i,j} /  \sum \text{CR}_i, \text{year} = 2$ & \\
+quant\_3 & $\text{quant\_3}_{j} = \sum \text{CR}_i \cdot \text{quant}_{i,j} /  \sum \text{CR}_i, \text{year} = 3$ & \\
+&&\\
+\hline
+\multicolumn{3}{c}{\textbf{Variables explicatives}} \\
+\hline
+delta\_i & 
+$\delta_{i,j} = \text{quant}_{i,j} - \text{quant\_k}, k = \text{year}(\text{class}_i)$
+& \multirow{4}{*}{\parbox{7cm}{%
+Écart entre la performance dans le cours i et la moyenne générale de l'année du cours, le tout exprimé en quantiles (mesure de la performance relative dans ce cours par rapport à celle de l'année)
+}} \\ %
+& & \\
+& & \\
+& & \\
+& & \\
+delta\_C & 
+$\sum \text{CR}_i \delta_{i,j} / \sum \text{CR}_i, \text{cours}_i \in C$
+& \multirow{3}{*}{\parbox{7cm}{%
+Moyenne, pondérée par le nombre de crédits ECTS, des $\delta_i$ des cours i appartenant à la catégorie C, le tout exprimé en quantiles
+}} \\
+& $ C \in \{\text{SCI, MIX, OTH} \}$ & \\
+& & \\
+\hline
+\multicolumn{3}{l}{\textbf{Note: i: 154 cours, j: 2460 étudiants}} \\
+\end{tabularx} 
+

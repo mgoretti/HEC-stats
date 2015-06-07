@@ -1,0 +1,41 @@
+% !TEX encoding = UTF-8 Unicode
+
+\subsection{Source des données utilisées}
+Nous avons travaillé avec un extrait anonymisé de la base de données du Décanat de la Faculté des HEC contenant les résultats individuels, pour tous les cours suivis, des étudiants ayant terminé leur plan d’études de Bachelor entre 2010 et 2014 (donc ayant gradué ou échoué durant cette période). Ainsi, nous avons éliminé d’office les étudiants toujours en cours d’études, les données n’étant pas complètes du point de vue des analyses que nous souhaitions réaliser.
+
+En raison des réformes régulières des plans d’études de la Faculté, notamment concernant leur composition et la périodicité des examens, nous avons choisi une plage temporelle correspondant aux cinq dernières années de promotion par souci de cohérence. Ainsi, hormis le passage d’examens annuels à semi-annuels en première année, les plans d’étude de la période étudiée sont restés globalement similaires.
+
+Nous disposions d'informations complémentaires pour chaque individu, à savoir le pays et l’établissement scolaire de provenance, le type de diplôme obtenu, le Master choisi en cas de poursuite des études à Lausanne et l’orientation suivie au Bachelor (\textit{management} ou \textit{économie politique}).
+
+\subsection{Travail sur les données brutes}
+Les seules observations parfois manquantes contenues dans les données reçues concernent la formation antérieure des étudiants (diplôme et établissement). Cette dernière n'étant qu'une information auxiliaire pour notre problématique, nous n’avons eu aucun besoin d’éliminer des observations et avons conservé l’intégralité de la base de données précitée pour entamer les travaux préparatoires, puis mener nos analyses.
+
+Faisant écho à notre question de recherche, nous avons d’abord défini trois catégories de cours, puis avons attribué les enseignements à chacune d’entre elles, nous basant sur notre propre expérience d’étudiants et les renseignements obtenus auprès de nos pairs, des professeurs et des anciens descriptifs de cours \footnote{Voir le fichier \textit{listeCours.xlsx} pour un extrait concret de cette allocation}. Nous avons distingué les cours quantitatifs (SCI), à forte composante mathématique ou calculatoire, « mixtes » (MIX), entrant dans le champ de la comptabilité, et non-quantitatifs (OTH), par opposition aux deux autres catégories.
+
+\subsection{Variables-clés et auxiliaires}
+
+Nous avons créé différentes variables, utilisées par la suite dans le cadre de notre analyse statistique et détaillées dans le tableau ci-dessous.
+
+\begin{table}[H]
+\noindent\makebox[\textwidth]{%
+\input{tab/summary}
+}%
+\caption{Variables utilisées}
+\label{tab:summary}
+\end{table}
+
+La distribution des notes au sein de l'effectif d'étudiants variant d'un cours à l'autre et d'un professeur à l'autre, il était primordial de normaliser les données afin d'assurer la comparabilité des résultats. À titre d'exemple, sur l'ensemble de nos observations, le résultat moyen obtenu dans le cours \textit{Analyse de la Décision} est de 4.19, contre 4.77 pour \textit{Systèmes d'Information}. Par conséquent, nous avons choisi d'exprimer les résultats individuels pour chaque cours en quantiles, obtenant ainsi une mesure de performance comparable avec celle des autres cours et étudiants. Aussi, les moyennes des quantiles par catégorie sont pondérées par les crédits ECTS associés à chaque cours, tout comme les moyennes usuelles, ce qui en fait leurs équivalents normalisés.
+
+De plus, dans l’ensemble de nos régressions, nous utilisons le sexe de l’étudiant comme variable de contrôle, sous la forme  Male = (1 si masculin, 0 si féminin), ainsi que l'année de début du cursus (2006 à 2014). Nous avons choisi de ne pas inclure davantage de facteurs de contrôle dans nos modèles principaux, mais de les conserver pour mener des régressions auxiliaires, notamment le type et le pays d'obtention du diplôme d’accès, l’établissement secondaire l'ayant délivré (pour les diplômes suisses uniquement) et le master choisi en cas de poursuite des études à Lausanne. Notre décision de ne pas les inclure dans nos modèles principaux résulte du fait qu’elles capturent une partie de l’effet de nos variables explicatives principales. À titre d’exemple, le type de diplôme d’accès obtenu peut expliquer (causer) à lui seul une partie des compétences des étudiants, telles que le fait d’être bon ou non en mathématiques. Dès lors, étant donnée cette corrélation, nous les avons écartées pour éviter un problème de << bad controls >> (\cite{angrist}). Enfin, notons que pour des raisons de confidentialité, nous n'avons pas eu accès à d'autres informations concernant les étudiants telles que leur âge, que nous aurions aimé inclure dans nos régressions (en tant que variables de contrôle ou dépendantes).
+
+Quant aux catégories de cours, leur construction se base sur plusieurs hypothèses de travail. Premièrement, nous supposons que la performance de première année dans les cours d'une catégorie donnée explique correctement la performance dans les cours des années suivantes de cette même catégorie. Cette hypothèse a été vérifiée expérimentalement et semble donc applicable à nos données. En effet (voir tableau \ref{tab:corr}), les delta de première année d'une catégorie sont les seuls ayant une corrélation positive avec ceux du reste du cursus \footnote{Vu sous un autre angle, les delta de première année d'une catégorie ont une corrélation négative avec ceux des autres catégories futures}. La faible corrélation (de l'ordre de 20-30\%) est justifiée par le fait qu'on ne s'intéresse qu'au signe, qui représente le fait d'être meilleur dans cette catégorie que dans les autres, plus qu'à l'intensité de cette surperformance. Les régressions \ref{tab:sci23}, \ref{tab:mix23} et \ref{tab:oth23} montrent de façon plus détaillée la relation entre les deltas, et on observe dans tous les cas que le delta de première année d'une catégorie est le seul ayant une relation positive avec celui de la même catégorie pour les années suivantes.
+
+Deuxièmement, nous postulons que cette mesure de performance dans les cours d'une catégorie est généralisable en dehors des cours du Bachelor HEC, dans le sens qu'elle exprime effectivement le fait d'être <<intrinsèquement bon>> dans le domaine relatif à la catégorie considérée. La littérature sur le savoir antérieur, évoquée en introduction, semble corroborer cette supposition. 
+
+
+\subsection{Sondage: prédictions des étudiants}
+
+
+Étant les premiers à explorer ce sujet de recherche à l’Université de Lausanne, nous avons réalisé un bref sondage (images \ref{fig:sondage1} et \ref{fig:sondage2}) auprès des étudiants actuellement en deuxième et troisième année de Bachelor pour connaître leurs a priori sur la thématique abordée dans cet article. Parmi les quelque 130 réponses récoltées, la croyance générale semble confirmer l’adage au sujet des cours quantitatifs et partager nos prédictions concernant leur effet sur la moyenne générale de deuxième et troisième année.
+
+En effet, les sondés estiment à 81.2\% que les cours du type quantitatif ont la plus grande influence sur la réussite au Bachelor, que le fait d'être bon dans ce type de cours impacte positivement la moyenne de deuxième année (63.9\%), alors que les avis sont totalement partagés concernant la troisième. Les étudiants interrogés semblent également partager notre intuition au sujet de l'effet positif du système de cours à choix en troisième année sur la moyenne générale (93.2\%), chacun pouvant se diriger vers les matières correspondant à ses intérêts et points forts.

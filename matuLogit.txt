@@ -1,0 +1,39 @@
+		(1)	(2)
+VARIABLES	LABELS	fini	y1
+			
+2.sexe	Sexe = 2, M	0.103	0.019
+		(0.111)	(0.021)
+0.matu_nom	matu_nom = 0, 0	-0.804***	-0.139***
+		(0.210)	(0.041)
+12.matu_nom	matu_nom = 12, Baccalaureat general français des series L, ES, S	-0.931***	-0.166***
+		(0.154)	(0.030)
+27.matu_nom	matu_nom = 27, Certificat d'acces etranger	-1.301***	-0.252***
+		(0.260)	(0.056)
+37.matu_nom	matu_nom = 37, Diplôme de fin d’etudes secondaires, section B, C,	-0.397	-0.061
+		(0.388)	(0.066)
+48.matu_nom	matu_nom = 48, Maturite de la Commission suisse de maturite (CSM)	-1.104***	-0.205***
+		(0.198)	(0.042)
+51.matu_nom	matu_nom = 51, Maturite gymnasiale, option : Biologie et chimie	-0.413*	-0.064*
+		(0.216)	(0.036)
+53.matu_nom	matu_nom = 53, Maturite gymnasiale, option : Langue moderne	-0.604**	-0.099**
+		(0.243)	(0.045)
+55.matu_nom	matu_nom = 55, Maturite gymnasiale, option : Philosophie / pedago	-0.764	-0.131
+		(0.485)	(0.099)
+56.matu_nom	matu_nom = 56, Maturite gymnasiale, option : Physique et applicat	0.545**	0.061***
+		(0.227)	(0.023)
+58.matu_nom	matu_nom = 58, Maturite professionnelle avec examen complementair	0.161	0.020
+		(0.479)	(0.058)
+60.matu_nom	matu_nom = 60, Nouvelle maturite cant.gymnasiale rec. par Confed.	-0.878***	-0.155***
+		(0.253)	(0.049)
+2012o.debut	Debut = 2012, omitted	-	-
+			
+2013o.debut	Debut = 2013, omitted	-	-
+			
+2014o.debut	Debut = 2014, omitted	-	-
+			
+Constant	Constant	0.780***	
+		(0.147)	
+			
+Observations		2,121	2,121
+Robust standard errors in parentheses			
+*** p<0.01, ** p<0.05, * p<0.1			

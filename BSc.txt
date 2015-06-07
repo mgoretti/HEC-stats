@@ -1,0 +1,16 @@
+		(1)	(2)
+VARIABLES	LABELS	moyenne_2	moyenne_3
+			
+2.sexe	Sexe = 2, M	-0.030	-0.088***
+		(0.029)	(0.024)
+1.BSc	BSc = 1, Bach.	-1.484***	
+		(0.047)	
+2.BSc	BSc = 2, Bach. Eco.	0.273***	0.223***
+		(0.025)	(0.034)
+Constant	Constant	4.443***	4.757***
+		(0.020)	(0.019)
+			
+Observations		1,913	1,107
+R-squared		0.579	0.053
+Robust standard errors in parentheses			
+*** p<0.01, ** p<0.05, * p<0.1			

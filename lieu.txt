@@ -1,0 +1,20 @@
+		(1)	(2)	(3)	(4)
+VARIABLES	LABELS	moyenne	moyenne	moyenne	moyenne
+					
+2.sexe	Sexe = 2, M	0.052	0.048	0.004	0.006
+		(0.039)	(0.034)	(0.019)	(0.019)
+0.matu_lieu	matu_lieu = 0, 0	-0.479***	-0.311***	-0.020	-0.019
+		(0.084)	(0.072)	(0.038)	(0.037)
+20.matu_lieu	matu_lieu = 20, France	-0.250***	-0.143***	-0.029	-0.031
+		(0.054)	(0.046)	(0.029)	(0.028)
+29.matu_lieu	matu_lieu = 29, Luxembourg	-0.136	-0.118	-0.004	-0.017
+		(0.137)	(0.133)	(0.055)	(0.056)
+33.matu_lieu	matu_lieu = 33, Maroc	-0.944***	-0.627***	-0.166*	-0.141
+		(0.125)	(0.116)	(0.096)	(0.095)
+Constant	Constant	4.021***	3.963***	4.590***	4.581***
+		(0.033)	(0.047)	(0.017)	(0.024)
+					
+Observations		2,460	2,460	1,451	1,451
+R-squared		0.046	0.277	0.003	0.018
+Robust standard errors in parentheses					
+*** p<0.01, ** p<0.05, * p<0.1					

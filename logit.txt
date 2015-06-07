@@ -1,0 +1,31 @@
+		(1)	(2)	(3)
+VARIABLES	LABELS	fini	fini	y1
+				
+delta_SCI1	delta_SCI1	10.372***		
+		(1.456)		
+delta_MIX1	delta_MIX1	3.522***		
+		(0.461)		
+2006.debut	Debut = 2006	3.604***	3.530***	0.455***
+		(0.601)	(0.596)	(0.030)
+2007.debut	Debut = 2007	3.614***	3.536***	0.455***
+		(0.403)	(0.403)	(0.028)
+2008.debut	Debut = 2008	1.640***	1.593***	0.322***
+		(0.185)	(0.182)	(0.033)
+2009.debut	Debut = 2009	0.471***	0.454***	0.110***
+		(0.141)	(0.140)	(0.034)
+2010.debut	Debut = 2010	0.357***	0.361***	0.089***
+		(0.137)	(0.136)	(0.033)
+2012o.debut	Debut = 2012, omitted	-	-	-
+				
+2013o.debut	Debut = 2013, omitted	-	-	-
+				
+2014o.debut	Debut = 2014, omitted	-	-	-
+				
+delta_OTH1	delta_OTH1		-2.378***	-0.441***
+			(0.300)	(0.055)
+Constant	Constant	0.102	0.120	
+		(0.104)	(0.103)	
+				
+Observations		2,103	2,102	2,102
+Robust standard errors in parentheses				
+*** p<0.01, ** p<0.05, * p<0.1				

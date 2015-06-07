@@ -1,0 +1,5 @@
+main:
+moyenne_{2|3} = (moyenne_1, moyenneCoursSci_1,  )*b + C
+
+aux:
+logit: y=réussite x=(moyenne cours scientifiques > 4, moyenne)*b + C

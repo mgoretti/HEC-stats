@@ -1,0 +1,101 @@
+\subsection{Modèles de régression}
+Afin de répondre à notre question de recherche principale et obtenir l’effet de la performance excédentaire dans la catégorie de cours quantitatifs de première année sur la moyenne (absolue et en quantiles) générale des deuxième et troisième années, nous avons utilisé les modèles de régression suivants :
+
+
+\begin{equation}
+\overline{quant} = \delta_{SCI} \cdot \beta_1 + \delta_{MIX} \cdot \beta_2 + \text{Male} \cdot \beta_3 + \text{Years} \cdot \gamma + \epsilon
+\label{eq:model1}
+\end{equation}
+\begin{equation}
+moyenne = \delta_{SCI} \cdot \beta_1 + \delta_{MIX} \cdot \beta_2 + \text{Male} \cdot \beta_3 + \text{Years} \cdot \gamma + \epsilon
+\label{eq:model2}
+\end{equation}
+
+Nous utilisons donc le sexe et l'année de début comme variables de contrôle.
+
+En complément, nous avons estimé l’effet d’être bon dans les cours des catégories SCI et MIX sur la probabilité de réussite au Bachelor à l’aide d’une régression logistique :
+
+\begin{equation}
+P(\text{Succès}) = \sigma \cdot (\delta_{SCI} \cdot \beta_1 +  \delta_{MIX} \cdot \beta_2 + \text{Years} \cdot \gamma + \epsilon)
+\label{eq:logit}
+\end{equation}
+
+
+Avec Years = matrice des années de début du cursus.
+
+\subsection{Résultats principaux}
+
+En nous focalisant d’abord sur les deux régressions du type (1) des tableaux \ref{tab:result2} et \ref{tab:result3}, nous observons que l’effet de la performance excédentaire normalisée, dans les catégories de cours quantitatifs et mixtes, impacte de façon positive et significative la moyenne générale exprimée en quantiles. Ainsi, pour la deuxième année, une augmentation de 10\% (en quantiles) de notre performance excédentaire dans les cours quantitatifs en première année impactera positivement notre moyenne générale (en quantiles) de près de 5\%, alors que cet effet sera de près de 2\% concernant les cours du type mixte. En troisième année, ce même effet s’inverse et s’atténue pour la performance excédentaire dans les cours quantitatifs de première année, passant à -2.65\% pour une surperformance de 10\% et devenant quasi-nul et non-significatif pour les cours mixtes.
+
+Nous expliquons cette inversion des effets par le système de libre choix des cours prévalant en troisième année : nous supposons majoritairement que les étudiants bons dans les matières quantitatives se retrouvent entre eux dans les cours de ce type en dernière année, ce qui conduit automatiquement à la diminution du « rang » (en quantiles) de leur performance en moyenne\footnote{Un étudiant situé dans le vingtième centile de la classe suivant un cours composé uniquement des étudiants du quarantième centile se retrouvera en moyenne au cinquantième centile}.
+
+En comparant les effets des variables explicatives précitées sur la moyenne absolue (régressions du type \ref{eq:model2}) et normalisée (en quantiles, régressions du type \ref{eq:model1}), nous pouvons poursuivre et confirmer notre analyse débutée ci-dessus. Effectivement, surperformer dans les cours quantitatifs de première année aura un effet significatif tant sur la moyenne absolue que normalisée de deuxième année. Il est tout à fait logique que les deux effets aillent dans le même sens, les cours suivis étant obligatoires pour tous les étudiants. Par contre, en troisième année, l’effet inversé sur la moyenne normalisée disparaît si l’on considère la moyenne absolue. Ceci est en accord avec notre interprétation reliée au libre choix des cours, car si chacun choisit en moyenne des cours correspondant à ses forces et affinités, l’effet de sa performance passée dans une catégorie particulière sur sa moyenne générale devrait disparaître.
+
+Notons encore que les femmes ont une meilleure moyenne que les hommes en troisième année, alors qu’il n’y a aucune différence significative entre les deux sexes l’année précédente.
+
+\subsubsection{Comportement des delta}
+Les variables delta sont colinéaires par construction. En effet \footnote{Une façon simple de se représenter ce phénomène est de se dire que si quelqu'un fait mieux que sa moyenne dans une catégorie, c'est qu'il a forcément dû faire moyen bien autre part}:
+
+$$
+\Sigma \text{CR}_i \cdot \delta_i = 0
+$$
+
+Cette colinéarité implique qu'on ne peut simplement insérer tous les deltas dans une régression et obtenir un résultat correct \footnote{Effectuer cette régression dans matlab donnerait un "Warning: Matrix is close to singular or badly scaled" car le déterminant serait très proche de 0}; il faut enlever au moins un régresseur. Le tableau \ref{tab:quant2} indique les coefficients obtenus pour chaque combinaison de régressions possible. Ces derniers semblent montrer que l'on pourrait obtenir n'importe quel résultat en choisissant les combinaisons qui nous arrangent (par exemple, delta\_SCI1, qui passe d'un coefficient significativement positif dans (1) à significativement négatif en (3), pour finalement ne pas avoir d'effet significatif pris isolément). Cependant, cette critique est infondée, l'interprétation des résultats étant plus compliquée qu'au premier abord: la première régression montre qu'augmenter l'un des deltas présents (par exemple SCI) en gardant l'autre fixe (MIX), ce qui implique que delta\_OTH1 va diminuer\footnote {La somme pondérée étant nulle}, le résultat de deuxième année va augmenter. Lorsque le coefficient de SCI est négatif, la variable fixe est OTH, donc on augmente SCI aux dépens de MIX. Il en est de même dans le cas complémentaire (on change MIX, OTH fixe et SCI est libre), où le résultat augmente si l'on augmente MIX. Ainsi, être bon dans les matières quantitatives en étant mauvais dans les cours mixtes a un effet négatif, par contre être bon en quantitatif ou mixte en compensant avec le non-quantitatif est rentable dans les deux cas.
+
+Finalement nous n'avons retenu que le cas où l'on inclut les deltas quantitatif et mixte dans la régression (ainsi, on compense par le non-quantitatif), notre but étant d'analyser le contraste entre les capacités dans les matières à composante mathématique plus rigoureuse (SCI et MIX) et celles plus génériques (OTH).
+
+
+\subsection{Analyses complémentaires}
+
+
+
+\begin{table}[H]
+  %\setcapwidth{0.6\textwidth}
+  \checkoddpage
+  \edef\side{\ifoddpage l\else r\fi}%
+  \makebox[\textwidth][\side]{%
+    \begin{minipage}[t]{.3\textwidth}
+      \centering
+		$$\frac{1}{1+e^{-t}}$$
+
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{.7\textwidth}
+      \centering
+      \begin{tabular}{l | ccc}
+                   & delta & P( S | high ) & P( S | low ) \\ \hline
+      Qua &  $\pm 0.1$ & 0.76 & 0.28 \\
+      Mix &  $\pm 0.35$ & 0.79 & 0.24 \\
+      Oth &  $\pm 0.35$ & 0.33 & 0.72 \\
+      \end{tabular}
+    \end{minipage}%
+  }%
+   \caption{Probabilités associées à des deltas de $\pm 2 se$}
+   \label{tab:logitExtr}
+\end{table}
+
+Les résultats de la régression logistique présentée dans l'équation \ref{eq:logit} sont visibles dans le tableau \ref{tab:logit}. Le tableau \ref{tab:logitExtr} ci-dessus illustre l’impact de se situer aux extrêmes ($\pm 2 se$) de la distribution des $\delta$, pour chaque catégorie de cours de première année, sur la probabilité de succès. Ainsi, un étudiant avec un $\delta_{SCI}$ de +0.1 (l’extrême positive de la distribution) aura 76\% de chances de réussir son cursus. À notre surprise, la probabilité de réussite est encore plus élevée (79\%) pour un étudiant avec un $\delta_{MIX}$ à  l’extrême positive de la distribution (+0.35), ce qui devrait réjouir les âmes les plus << comptaphiles >> de l’université ! Le constat s’inverse en considérant la catégorie des cours non-quantitatifs : le fait d’être excellent dans ces matières, et donc moins bon dans les autres, rend la réussite du cursus plus compliquée, comme en témoigne la probabilité de réussite de 33\% pour un $\delta_{OTH}$ de +0.35. Aux extrêmes négatifs des distributions précitées, on observe des résultats inversés et respectant l'ordre des catégories de cours en termes d'effet sur la probabilité de réussite. Aussi, au vu de l’impact décroissant des années sur la probabilité de réussite, le cursus de Bachelor semble être devenu plus difficile au fil du temps.
+
+
+En analysant individuellement les cours de première année, par opposition aux agrégats (catégories) considérés précédemment, nous nous attendions à ce que les cours des deux semestres aient des effets de même signe sur la performance de l'année suivante. Le tableau \ref{tab:newClasses} montre les différences existant en termes d’effet de la performance relative d’un étudiant dans chacun d’entre eux sur sa performance globale de deuxième année. Contrairement à nos attentes, nous observons que la surperformance relative dans les cours du premier semestre en comptabilité, droit et statistiques aura un effet négatif sur la moyenne générale de deuxième année, alors que la surperformance relative dans ces cours au second semestre l’impactera positivement (ou nullement).
+
+Une piste d'explication pourrait être liée au paradoxe soulevé par \cite{roschelle}. On pourrait considérer que les cours du premier semestre ne sont qu’un rappel des connaissances préalablement acquises au gymnase, alors que ceux du second abordent une matière nouvelle ou/et supplémentaire. Ainsi, en moyenne, la performance dans les cours du premier semestre serait influencée par l’avantage du savoir acquis, pour les étudiants ayant reçu des enseignements similaires par le passé, alors que celle des cours du deuxième semestre refléterait davantage la performance « intrinsèque » des élèves, confrontés à une activité d’apprentissage d’une matière nouvelle. Toutefois, il se pourrait également que nous soyons simplement en train d'observer l'effet de la progression des étudiants sur leur réussite future: ceux qui s'améliorent d'un semestre à l'autre auront une meilleure moyenne en deuxième année, et inversement.
+
+
+\subsection{Résultats auxiliaires}
+
+Nous avons profité de notre base de données pour confirmer ou infirmer certains autres préjugés concernant les étudiants de la faculté. Dans toutes les analyses qui suivront, pour chaque variable, nous avons regroupé les catégories contenant un nombre d'individus inférieur à 20 dans la catégorie \textit{Autres}.
+
+Nous avons choisi d'analyser les effets de différentes variables auxiliaires sur la performance générale de façon individuelle, en raison de problèmes de colinéarité entre elles. Par exemple, ajouter le gymnase et le type de maturité dans la même régression donnerait un résultat faussé, car beaucoup d'observations se retrouveraient dans la catégorie <<Autres>> d'une des deux variables. Ainsi, les étudiants avec une maturité professionnelle se retrouveraient avec un coefficient de +1.19, mais également classés dans les <<autres écoles>>, souffrant d'un coefficient de -1.12 (en raison des étrangers majoritaires dans cette catégorie). Par conséquent, leur vrai coefficient devrait être autour de zéro, en n'intégrant pas les écoles, mais l'effet se retrouverait faussé.
+
+
+En premier lieu, nous nous sommes demandé si les étudiants ayant choisi l’orientation \textit{Économie Politique} en troisième année étaient intrinsèquement meilleurs que leurs camarades de l’orientation \textit{Management}, malgré la difficulté présumée plus élevée de leur plan d’études. Nos résultats (tableau \ref{tab:bac}) montrent que ce cliché semble refléter la réalité, les étudiants d'\textit{Écopo} obtenant une meilleure moyenne en troisième année, mais également en deuxième, à plan d’études égal avec les autres. Il semblerait donc que les étudiants globalement meilleurs (en termes de résultats) se tournent naturellement vers l’orientation \textit{Économie Politique} en troisième année. Nous avons également observé cette tendance durant nos propres études, les étudiants moins bons ayant peur de choisir l’orientation réputée plus difficile par peur de moins bien réussir, contribuant ainsi à la perpétration de ce résultat au fil des années.
+
+En second lieu, nous avons souhaité vérifier l’effet du savoir antérieur (\cite{garcia}) en analysant le diplôme d’accès détenu par les étudiants de notre échantillon. En effet, les professeurs en charge des cours du premier semestre de première année à HEC sont conscients de certaines répétitions avec les enseignements suivis en fin de scolarité (gymnase), notamment dans les orientations \textit{Économie et Droit} et \textit{Maths-Physique} en Suisse. La « voie royale » d’entrée, pour un étudiant suisse, étant d’avoir suivi une maturité \textit{Éco-Droit}, nous avons choisi de régresser la moyenne générale au Bachelor sur le diplôme d’accès détenu, avec la maturité précitée comme référence.
+
+Nos analyses démontrent qu’en éliminant les individus ayant échoué au cours de leur Bachelor, aucune différence entre la maturité \textit{Éco-Droit} suisse et les autres diplômes, suisses et étrangers, publics et privés, n’est statistiquement significative, excepté pour le cursus \textit{Maths-Physique} suisse (tableau \ref{tab:matuNom}). Les étudiants ayant suivi ce dernier réussissent leur cursus avec une moyenne significativement plus élevée que l’ensemble de leurs camarades (coefficient de 0.38 sans corriger pour les étudiants ayant échoué au Bachelor, 0.18 sinon). Ces résultats sont illustrés graphiquement dans le diagramme \ref{fig:matu}.
+
+En complément, nous avons mené une régression logistique pour estimer la probabilité de succès en fonction du diplôme d'accès obtenu (tableau \ref{tab:matuNomLogit}), en contrôlant pour le sexe et les années de début. La plupart des diplômes ont un coefficient significativement négatif ou nul par rapport à la catégorie de référence (maturité suisse option \textit{économie et droit}), pour laquelle la probabilité de réussite s'élève à 69\%. À nouveau, seule la catégorie \textit{physique et application des mathématiques} présente un coefficient significativement positif par rapport à la référence, avec une probabilité de succès au Bachelor de 79\% (pour l'année de référence 2010). Dès lors, les résultats des deux analyses précitées suggèrent que le cursus lausannois, dans l'ensemble, s'appuie fortement sur les connaissances quantitatives acquises préalablement, confirmant sa réputation.
+
+En dernier lieu, nous avons mené une analyse géographique de la probabilité de succès en considérant le pays d'obtention du diplôme d'accès, ceci à l'aide d'une régression logistique (tableau \ref{tab:matuLieuLogit}). Elle montre que les étudiants des pays autres que la Suisse et le Luxembourg ont une probabilité de réussite inférieure. Cette dernière pourrait être due aux différences dans le niveau et le système de formation au-delà de nos frontières, pouvant causer quelques difficultés d'adaptation aux étudiants lors de l'immersion dans le cursus lausannois.
+
